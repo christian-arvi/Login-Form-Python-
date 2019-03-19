@@ -142,6 +142,8 @@
         <h5 style="color:red;">Wrong password!</h5>
         {% elif login==0 %}
         <h5 style="color:red;">The account does not exist!</h5>
+        {% elif login==3 %}
+        <h5 style="color:red;">Please login first!</h5>
         {% endif %}
         <button type="submit">Submit</button>
     </form>

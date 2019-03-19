@@ -79,10 +79,22 @@ button:hover {
 {% endblock style %}
 
 {% block form %}
-{% if login==2 %}
+{% if login==1 %}
     <div class="success">
-        <h1>Welcome {{email}}</h1><br>
-        <form action="/login-hw">
+        <center><img src="placeholder.png" width="200px" height="200px"></center>
+        <h1>Welcome back! to MyWebsite! </h1><br>
+        <h2>Email: {{email}}</h2><br>
+        <h2>Password: {{password}}</h2><br>
+        <form action="/logout">
+        <button type="submit">Logout</button></form>
+    </div>
+{% elif login==0 %}
+    <div class="success">
+        <center><img src="placeholder.png" width="200px" height="200px"></center>
+        <h1>Welcome to MyWebsite! </h1><br>
+        <h2>Email: {{email}}</h2><br>
+        <h2>Password: {{password}}</h2><br>
+        <form action="/logout">
         <button type="submit">Logout</button></form>
     </div>
 {% else %}
